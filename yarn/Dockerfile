@@ -8,4 +8,7 @@ RUN npm install -g npm && \
     npm install -g @vue/cli @vue/cli-init && \
     npm install -g yarn
 
-ENTRYPOINT ["yarn"]
+# This environment variables for nuxt.js (https://ja.nuxtjs.org/faq/host-port/)
+ENV HOST 0.0.0.0
+
+CMD ["yarn", "dev"]

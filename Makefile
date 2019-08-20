@@ -1,5 +1,8 @@
-yarn-dev: ## Entry for yarn command
-	docker-compose run --rm yarn run dev
+install:
+	docker-compose run --rm yarn yarn install
 
-yarn-watch: ## Run yarn watch
-	docker-compose run --rm yarn run watch
+dev: ## Entry for yarn command
+	docker-compose run --rm yarn yarn run dev
+
+watch: ## Run yarn watch
+	docker-compose run --rm yarn yarn run watch
