@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  yarn:
+    build:
+      context: ./yarn
+    ports:
+      - ${YARN_PORT}:3000
+    volumes:
+      - ./${PROJECT_NAME}:/app:cached
+      - node-modules-volume:/app/node_modules
+volumes:
+  mysql-volume:
+  node-modules-volume:
